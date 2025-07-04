@@ -6,7 +6,6 @@ from sklearn.manifold import TSNE
 from itertools import combinations
 from scipy.spatial import distance 
 
-
 def detect_stars(img, threshold=200):
     blurred = cv2.GaussianBlur(img, (3, 3), 0)
     _, thresh = cv2.threshold(blurred, threshold, 250, cv2.THRESH_BINARY)
@@ -106,6 +105,13 @@ def visalize(sift_descritors):
     plt.scatter(reduced[:, 0], reduced[:, 1])
     plt.title("t-SNE")
     plt.show()
+
+
+
+
+
+
+
 
 
 
